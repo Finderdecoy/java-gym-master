@@ -1,5 +1,7 @@
 package ru.yandex.practicum.gym;
 
+import java.util.TreeMap;
+
 public class TrainingSession {
 
     //группа
