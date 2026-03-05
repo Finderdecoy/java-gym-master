@@ -23,7 +23,8 @@ public class CountOfTrainings implements Comparator<CountOfTrainings> {
         this.coach = coach;
     }
 
-    public CountOfTrainings() {}
+    public CountOfTrainings() {
+    }
 
     @Override
     public boolean equals(Object o) {
