@@ -11,6 +11,9 @@ public class CountOfTrainings implements Comparator<CountOfTrainings> {
         this.count = count;
     }
 
+    public CountOfTrainings() {
+    }
+
     public Integer getCount() {
         return count;
     }
@@ -21,9 +24,6 @@ public class CountOfTrainings implements Comparator<CountOfTrainings> {
 
     public void setCoach(Coach coach) {
         this.coach = coach;
-    }
-
-    public CountOfTrainings() {
     }
 
     @Override
@@ -43,14 +43,11 @@ public class CountOfTrainings implements Comparator<CountOfTrainings> {
 
     @Override
     public int compare(CountOfTrainings o1, CountOfTrainings o2) {
-        return Integer.compare(o2.count, o1.count);
+        return Integer.compare(o1.count, o2.count);
     }
 
     @Override
     public String toString() {
-        return "CountOfTrainings{" +
-                "coach=" + coach +
-                ", count=" + count +
-                '}';
+        return "CountOfTrainings{" + "coach=" + coach + ", count=" + count + '}';
     }
 }
