@@ -113,12 +113,12 @@ public class TimetableTest {
 
         assertEquals(testMapTrainingSessionForMonday, timetable.getTrainingSessionsForDay(DayOfWeek.MONDAY));
         assertEquals(testListTrainingSessionForMonday, timetable.getTrainingSessionsForDayAndTime(DayOfWeek.MONDAY, new TimeOfDay(13, 00)));
-        assertEquals(new ArrayList<>(), timetable.getTrainingSessionsForDayAndTime(DayOfWeek.MONDAY,new TimeOfDay(14,00)));
+        assertEquals(new ArrayList<>(), timetable.getTrainingSessionsForDayAndTime(DayOfWeek.MONDAY, new TimeOfDay(14, 00)));
 
         //Вернется пустая мапа и пустой список занятий за день и время во Вторник.
 
         assertEquals(new TreeMap<>(), timetable.getTrainingSessionsForDay(DayOfWeek.TUESDAY));
-        assertEquals(new ArrayList<>(), timetable.getTrainingSessionsForDayAndTime(DayOfWeek.TUESDAY,new TimeOfDay(13,00)));
+        assertEquals(new ArrayList<>(), timetable.getTrainingSessionsForDayAndTime(DayOfWeek.TUESDAY, new TimeOfDay(13, 00)));
     }
 
 }
