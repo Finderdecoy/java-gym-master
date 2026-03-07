@@ -43,7 +43,7 @@ public class TestCoachCountTraining {
         timetable.addNewTrainingSession(new TrainingSession(group, coach2, DayOfWeek.SUNDAY, new TimeOfDay(16, 00)));
         timetable.addNewTrainingSession(new TrainingSession(group, coach4, DayOfWeek.FRIDAY, new TimeOfDay(17, 00)));
         //Вынес поля получения Списка что бы не дублировать
-        gettedList = timetable.getCountByCoaches(timetable);
+        gettedList = timetable.getCountByCoaches();
     }
 
     @Test
@@ -69,14 +69,14 @@ public class TestCoachCountTraining {
 
     @Test
     public void givenSortedListFromLargeToSmall() {
-        //Создаю тествоый список для сравнения . Данный список отсортирован вручную.
+        //Создаю тествоый список для сравнения. Данный список отсортирован вручную.
         List<CountOfTrainings> testListCorectSort = new ArrayList<>();
         testListCorectSort.add(new CountOfTrainings(coach2, 5));
         testListCorectSort.add(new CountOfTrainings(coach1, 3));
         testListCorectSort.add(new CountOfTrainings(coach, 2));
         testListCorectSort.add(new CountOfTrainings(coach4, 1));
 
-        assertEquals(testListCorectSort, timetable.getCountByCoaches(timetable));
+        assertEquals(testListCorectSort, timetable.getCountByCoaches());
 
     }
 }
